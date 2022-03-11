@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { AdvicePage } from "./pages/AdvicePage";
+import { RandomPersonPickerPage } from "./pages/RandomPersonPickerPage";
 
 function App() {
   return (
     <div className="App">
-      This project/branch is only for folder/file structure lessons, does not
-      contain anything.
+      <RandomPersonPickerPage />
     </div>
   );
 }
