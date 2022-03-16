@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { allPersons } from "./randomPersonPickerPage/randomPersonConsts";
+import {
+  allPersons,
+  numbersConst,
+} from "./randomPersonPickerPage/randomPersonConsts";
 import {
   RandomPersonBox,
   PageContainer,
@@ -14,6 +17,11 @@ export const RandomPersonPickerPage = () => {
   const chooseVictim = () =>
     setRandomNumber(Math.floor(Math.random() * (19 - 1) + 0));
 
+  console.log(numbersConst);
+  let filteredNumbers = numbersConst.filter((e, index) => {
+    return e < 50;
+  });
+  console.log(filteredNumbers);
   return (
     <PageContainer>
       <RandomPersonBox>
