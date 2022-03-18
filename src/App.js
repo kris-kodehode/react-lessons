@@ -1,21 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
-import AdvicePage from "./pages/AdvicePage.js";
+import { NavBar, NavLink } from "./componentsGlobal/componentsGlobal";
+import AdvicePage from "./pages/AdvicePage";
 import AboutUsPage from "./pages/AboutUsPage.js";
 import RandomPersonPickerPage from "./pages/RandomPersonPickerPage.js";
 import CatFactPage from "./pages/CatFactPage.js";
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <nav>
-          <Link to="/about-us-page">About Us </Link>
-          <Link to="/advice-page">Advice Page</Link>
-          <Link to="/cat-fact-page">Cat Facts</Link>
-          <Link to="/random-person-picker-page">Pant Lottery</Link>
-        </nav>
+        <NavBar>
+          <NavLink to="/about-us-page">About Us </NavLink>
+          <NavLink to="/advice-page">Advice Page</NavLink>
+          <NavLink to="/cat-fact-page">Cat Facts</NavLink>
+          <NavLink to="/random-person-picker-page">Pant Lottery</NavLink>
+        </NavBar>
         <Routes>
           <Route path="/about-us-page" element={<AboutUsPage />} />
           <Route path="/advice-page" element={<AdvicePage />} />
