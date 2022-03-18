@@ -10,7 +10,7 @@ import {
   RandomText,
 } from "./randomPersonPickerPage/randomPersonPickerStyles";
 
-export const RandomPersonPickerPage = () => {
+const RandomPersonPickerPage = () => {
   const [randomPerson, setRandomPerson] = useState(allPersons);
   const [randomNumber, setRandomNumber] = useState(0);
 
@@ -31,3 +31,5 @@ export const RandomPersonPickerPage = () => {
     </PageContainer>
   );
 };
+
+export default RandomPersonPickerPage;
