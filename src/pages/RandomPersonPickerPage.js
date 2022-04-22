@@ -25,7 +25,9 @@ const RandomPersonPickerPage = () => {
   return (
     <PageContainer>
       <RandomPersonBox>
-        <RandomText>{randomPerson[randomNumber]}</RandomText>
+
+        {/* random key som får component til å rendre på nytt og spille av animasjon igjen */}
+        <RandomText key={Math.random()}>{randomPerson[randomNumber]}</RandomText>
       </RandomPersonBox>
       <StyledButton onClick={chooseVictim}> Button of dethhhhh</StyledButton>
     </PageContainer>
